@@ -6,6 +6,6 @@ switch(znak){
     case "+": return t1+t2; break;
     case "-": return t1-t2; break;
     case "*": return t1*t2; break;
-    case "/": return t1/t2; break;
+    case "/": {if t2!=0 {return t1/t2}else{return 999}}; break;
     case "^": return power(t1,t2); break;
 }

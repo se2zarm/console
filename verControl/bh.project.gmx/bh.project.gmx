@@ -17,6 +17,10 @@
     <script>scripts\Function_ParseString.gml</script>
     <script>scripts\string_is_real.gml</script>
     <script>scripts\Function_Execute_Aryphmetic.gml</script>
+    <scripts name="Ex">
+      <script>scripts\Function_Ex_ShowMessage.gml</script>
+      <script>scripts\PropertiesFunction.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\o_god</object>
@@ -25,6 +29,13 @@
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>
+  <constants number="5">
+    <constant name="F_ARG_INT">0</constant>
+    <constant name="F_ARG_REAL">1</constant>
+    <constant name="F_ARG_STRING">2</constant>
+    <constant name="F_ARG_VAR">3</constant>
+    <constant name="F_ARG_EXP">4</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>

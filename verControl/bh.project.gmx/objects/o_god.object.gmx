@@ -34,6 +34,7 @@ ds_list_add(operator,   "+","-","*","/","^")
 ds_list_add(Razdeliteli,"+","-","*","/","^")
 ds_list_add(Razdeliteli," ",",",";","=","~","&lt;","&gt;")
 console[| 0] = "Welcome!"
+c = 0
 </string>
           </argument>
         </arguments>
@@ -62,7 +63,14 @@ q = ds_list_size(console)
 for(i = q; i&gt;0; i--){
     draw_text(0,room_height-i*16,"["+string(q-i+1)+"] |  "+string(console[| q-i])+"  |")
 }
-draw_text(400,48,"Input: "+keyboard_string)
+
+if (c % 10)&gt;4 {
+    draw_text(400,48,"Input: "+keyboard_string)
+}else{
+    draw_text(400,48,"Input: "+keyboard_string+"|")
+}
+
+c++
 </string>
           </argument>
         </arguments>
