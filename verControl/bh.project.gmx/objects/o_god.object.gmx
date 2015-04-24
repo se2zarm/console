@@ -25,16 +25,19 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>globalvar vars, console, operator, Razdeliteli;
+            <string>globalvar vars, console, operator, Razdeliteli, command;
 vars = ds_map_create()
 console = ds_list_create()
 operator = ds_list_create()
+command = ds_list_create()
 Razdeliteli = ds_list_create()
 ds_list_add(operator,   "+","-","*","/","^")
 ds_list_add(Razdeliteli,"+","-","*","/","^")
+ds_list_add(command,"listvars","setcolor")
 ds_list_add(Razdeliteli," ",",",";","=","~","&lt;","&gt;")
 console[| 0] = "Welcome!"
 c = 0
+draw_set_colour(c_black)
 </string>
           </argument>
         </arguments>
@@ -61,13 +64,13 @@ c = 0
 q = ds_list_size(console)
 
 for(i = q; i&gt;0; i--){
-    draw_text(0,room_height-i*16,"["+string(q-i+1)+"] |  "+string(console[| q-i])+"  |")
+    draw_text(0,room_height-48-i*16,"["+string(q-i+1)+"] |  "+string(console[| q-i])+"  |")
 }
 
 if (c % 10)&gt;4 {
-    draw_text(400,48,"Input: "+keyboard_string)
+    draw_text(16,room_height-24,"Input: "+keyboard_string)
 }else{
-    draw_text(400,48,"Input: "+keyboard_string+"|")
+    draw_text(16,room_height-24,"Input: "+keyboard_string+"|")
 }
 
 c++

@@ -21,6 +21,7 @@
       <script>scripts\Function_Ex_ShowMessage.gml</script>
       <script>scripts\PropertiesFunction.gml</script>
     </scripts>
+    <script>scripts\getcolor.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\o_god</object>
